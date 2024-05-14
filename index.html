@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수현&본무</title>
     <style>
+        .more-small-text {
+            font-size: 15px; /* 텍스트 크기를 12px로 설정 */
+        }
+        .small-text {
+            font-size: 20px; /* 텍스트 크기를 12px로 설정 */
+        }
         img {
             width: 60%; /* Set a consistent width for all images */
             height: 60%;
@@ -65,8 +71,8 @@
         updateElapsedTime();
     </script>
 
-    <h1>1. 우리가 처음 둘이
-    만난날은? 
+    <h1 class="small-text">1. 우리가 처음 둘이
+    만난날은? <p>
     ex: 0220
     (hint: 국밥, 투게더)</h1>
 
@@ -86,7 +92,7 @@
 
     <!-- 레벨 2 -->
     <div id="contentContainer2" style="display: none;">
-    <h1>2. 우리가 사귄 날짜는?
+    <h1 class="small-text">2. 우리가 사귄 날짜는?
         ex: 0220</h1>
 
         <form id="passwordForm2">
@@ -104,8 +110,8 @@
 
     <!-- 레벨 3 -->
     <div id="contentContainer3" style="display: none;">
-    <h1>3. 수현이가 본무에게 처음으로 준 꽃 이름은?
-        ex: 국화꽃
+        
+    <h1 class="more-small-text">3. 수현이가 본무에게 처음으로 준 꽃 이름은?<p>        ex: 국화꽃
     </h1>
 
         <form id="passwordForm3">
@@ -123,7 +129,7 @@
 
     <!-- 레벨 4 -->
     <div id="contentContainer4" style="display: none;">
-    <h1>4. 본무의 MBTI는?(소문자)</h1>
+    <h1 class="small-text">4. 본무의 MBTI는?(소문자)</h1>
 
         <form id="passwordForm4">
             <label for="password4">암호:</label>
@@ -140,7 +146,7 @@
 
     <!-- 레벨 5 -->
     <div id="contentContainer5" style="display: none;">
-    <h1>5. 본무의 생일은?</h1>
+    <h1 class="small-text">5. 본무의 생일은?</h1>
 
         <form id="passwordForm5">
             <label for="password5">암호:</label>
