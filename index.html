@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수현&본무</title>
+    <style>
+        img {
+            width: 100%; /* Set a consistent width for all images */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        @media screen and (max-width: 500px) {
+            img {
+                max-width: 100%;
+                width: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <p><img src="./KakaoTalk_Photo_2024-05-15-02-06-46 010.jpeg" alt="대체 텍스트"></p>
+    <p id="elapsedTime"></p>
+
+    <script>
+        function updateElapsedTime() {
+            // 현재 날짜 및 시간 객체 생성
+            var now = new Date();
+
+            // 특정 날짜와 시간 설정 (2024/01/17/00시)
+            var targetDate = new Date('2024-05-06T00:00:00');
+
+            // 두 날짜 간의 차이 계산
+            var timeDiff = now - targetDate;
+
+            // 차이를 일, 시간, 분, 초로 변환
+            var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            // 결과를 문자열로 만들어 출력
+            var resultString = formatTime(days) + '일' +formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+
+            // 결과를 HTML 요소에 추가
+            document.getElementById('elapsedTime').innerHTML = '우리가 사랑한지: ' + resultString;
+        }
+
+        function formatTime(time) {
+            // 시간을 두 자리로 포맷팅
+            return time < 10 ? '0' + time : time;
+        }
+
+        // 1초마다 updateElapsedTime 함수 호출하여 실시간 업데이트
+        setInterval(updateElapsedTime, 1000);
+        
+        // 페이지 로딩 시에도 초기 업데이트 수행
+        updateElapsedTime();
+    </script>
+
+    <h1>1. 우리가 처음 둘이 만난날은? 
+        ex: 0220
+        (hint: 국밥, 투게더)</h1>
+
+    <!-- 레벨 1 -->
+    <div id="contentContainer1">
+        <form id="passwordForm1">
+            <label for="password1">정답:</label>
+            <input type="text" id="password1" required>
+            <button type="button" onclick="checkPassword(1)">확인</button>
+        </form>
+
+        <div id="hiddenContent1" style="display: none;">
+            <h2>정답!</h2>
+            <p> <img src="./KakaoTalk_Photo_2024-05-15-02-09-05.jpeg" alt="대체 텍스트"></p>
+        </div>
+    </div>
+
+    <!-- 레벨 2 -->
+    <div id="contentContainer2" style="display: none;">
+    <h1>2. 우리가 사귄 날짜는?
+        ex: 0220</h1>
+
+        <form id="passwordForm2">
+            <label for="password2">암호:</label>
+            <input type="text" id="password2" required>
+            <button type="button" onclick="checkPassword(2)">확인</button>
+        </form>
+
+        <div id="hiddenContent2" style="display: none;">
+            <h2>
+                <h2>정답!(저날 우리 5월6일임)</h2>
+            <p> <img src="./KakaoTalk_Photo_2024-05-15-02-06-45 001.jpeg" alt="대체 텍스트"></p>
+        </div>
+    </div>
+
+    <!-- 레벨 3 -->
+    <div id="contentContainer3" style="display: none;">
+    <h1>3. 수현이가 본무에게 처음으로 준 꽃 이름은?
+        ex: 국화꽃
+    </h1>
+
+        <form id="passwordForm3">
+            <label for="password3">암호:</label>
+            <input type="text" id="password3" required>
+            <button type="button" onclick="checkPassword(3)">확인</button>
+        </form>
+
+        <div id="hiddenContent3" style="display: none;">
+            <h2>정답!</h2>
+            <p> <img src="./KakaoTalk_Photo_2024-05-15-02-06-46 009.jpeg" alt="대체 텍스트"></p>
+
+        </div>
+    </div>
+
+    <!-- 레벨 4 -->
+    <div id="contentContainer4" style="display: none;">
+    <h1>4. 본무의 MBTI는?(소문자)</h1>
+
+        <form id="passwordForm4">
+            <label for="password4">암호:</label>
+            <input type="text" id="password4" required>
+            <button type="button" onclick="checkPassword(4)">확인</button>
+        </form>
+
+        <div id="hiddenContent4" style="display: none;">
+            <h2>정답!</h2>
+            <p> <img src="./IMG_4978.jpg" alt="대체 텍스트"></p>
+
+        </div>
+    </div>
+
+    <!-- 레벨 5 -->
+    <div id="contentContainer5" style="display: none;">
+    <h1>5. 본무의 생일은?</h1>
+
+        <form id="passwordForm5">
+            <label for="password5">암호:</label>
+            <input type="text" id="password5" required>
+            <button type="button" onclick="checkPassword(5)">확인</button>
+        </form>
+
+        <div id="hiddenContent5" style="display: none;">
+            <h2>정답!</h2>
+            <p>다 맞췄네!! 고생했어 우리 이쁜이!!</p>
+            <p>제작과정:<img src="./스크린샷 2024-05-15 오전 2.21.13.png" alt="대체 텍스트"></p>
+
+        </div>
+    </div>
+
+    <script>
+        // 각 레벨에 대한 올바른 암호 설정
+        var correctPasswords = ['0325', '0506', '장미꽃', 'enfp', '0131'];
+
+        function checkPassword(level) {
+            var enteredPassword = document.getElementById('password' + level).value;
+
+            // 현재 레벨에 대한 올바른 암호를 확인
+            if (enteredPassword === correctPasswords[level - 1]) {
+                // 현재 레벨의 숨겨진 내용을 보여줌
+                document.getElementById('hiddenContent' + level).style.display = 'block';
+
+                // 다음 레벨로 이동
+                if (level < 5) {
+                    document.getElementById('contentContainer' + (level + 1)).style.display = 'block';
+                }
+            } else {
+                alert('김수현!!!');
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
